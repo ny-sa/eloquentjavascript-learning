@@ -40,7 +40,7 @@ rl.question("You need to move this instant! What color do you follow?\n", functi
             console.log("You're outside! But there's nothing under your feet, and you fall off the ledge. You die.");
             break;
         default:
-            console.log("Too slow! You're indecision leads to falling boulders crushing you to pulp. You die.");
+            console.log("Too slow! Your indecision leads to falling boulders crushing you to pulp. You die.");
             break;
     }
     process.exit();
