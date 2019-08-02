@@ -1,21 +1,21 @@
 //No hints! Ever!
 //Minimum
-const min = (x, y) => {                 //Simple condition check
-    if (x <= y)
+const min = (x, y) => {
+    if (x <= y)                                 //Simple condition check
         return x;
     else
         return y;
 };
-console.log(min(1,'a'));                //All strings are before numbers I guess
+console.log(min(1,'a'));                  //All strings are before numbers I guess
 //Recursion
 function isEven(x){
-    if (!Number.isInteger(x))                   //integer checker
+    if (!Number.isInteger(x))                   //Checks if not integer
         return 'Integers only!';
     if (x === 0)
         return true;
     if (x === 1)
         return false;
-    if (x < 0)                                  //negative checker
+    if (x < 0)                                  //Checks if negative
         return isEven(x + 2);
     else
         return isEven(x - 2);
@@ -28,7 +28,7 @@ console.log(isEven(-131));
 //Bean Counting
 const countBs = function(a) {
     let num = 0;
-    for (let n = 0; n < a.length; n++) {            // <= string.length - 1 or < string.length, which is better to use?
+    for (let n = 0; n < a.length; n++) {            //<=string.length-1 or <string.length, which is better to use?
         if (a[n] === 'B')
            num++;
     }

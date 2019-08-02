@@ -8,7 +8,7 @@ for(let x = 1; x < 7; x++){
 console.log("----------------------------------");
 //FizzBuzz
 for(let x = 1; x <= 100; x++){
-    if(x % 15 === 0){                               //Checks for Fizz && Buzz first
+    if(x % 15 === 0){                               //Checks for the LCM of 3 and 5, 15, first
         console.log("FizzBuzz");
         continue;
     }
