@@ -3,11 +3,17 @@ let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-//const a = 2;
+
+//Bindings
+const a = 2;
 //a = a + 1;
-//console.log(a); //constants cannot change
-//let 2pac = "rapper"; //name cannot start with a number
-/*rl.question("Pick a number: ", function(answer){
+console.log(a);                                  //constants cannot change
+
+//Binding Names
+//let 2pac = "rapper";                          //name cannot start with a number
+
+//Conditional Execution
+rl.question("Pick a number: ", function(answer) {                  //this way of prompting is a bit more involved
     let num = Number(answer);
     if (num < 10) {
         console.log("Small");
@@ -18,18 +24,22 @@ let rl = readline.createInterface({
     }
     rl.close();
     process.exit();
-});*/
-/*for(let a = 1; a<=60; a++){
+});
 
-    if (a % 17 == 0) {
+//Breaking out of a Loop
+for (let a = 1; a<=60; a++) {
+    if (a % 17 === 0) {
         console.log("hiccup");
-        continue;                   //testing continue
+        continue;                                                                   //testing continue
     }
-        console.log(a);
-}*/
-console.log("You are in a cave.\nYou see three exits, with a red, yellow and blue hue respectively.\nA massive rumble suddenly shakes the surrounding; the whole place might just collapse!"); //testing switch
-rl.question("You need to move this instant! What color do you follow?\n", function(answer){
-    switch(answer){
+    console.log(a);
+}
+
+//Dispatching on a Value with switch
+console.log("You are in a cave.\nYou see three exits, with a red, yellow and blue hue respectively.\nA massive rumble suddenly " +
+    "shakes the surrounding; the whole place might just collapse!");                                            //testing switch
+rl.question("You need to move this instant! What color do you follow?\n", function(answer) {
+    switch (answer) {
         case "red":
             console.log("A blast of superheated air incapacitates, and you fall into a lava pit below. You die.");
             break;
