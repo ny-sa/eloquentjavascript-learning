@@ -4,37 +4,6 @@ let rl = readline.createInterface({
     output: process.stdout
 });
 
-//Bindings
-const a = 2;
-//a = a + 1;
-console.log(a);                                  //constants cannot change
-
-//Binding Names
-//let 2pac = "rapper";                          //name cannot start with a number
-
-//Conditional Execution
-rl.question("Pick a number: ", function(answer) {                  //this way of prompting is a bit more involved
-    let num = Number(answer);
-    if (num < 10) {
-        console.log("Small");
-    } else if (num < 100) {
-        console.log("Medium");
-    } else {
-        console.log("Large");
-    }
-    rl.close();
-    process.exit();
-});
-
-//Breaking out of a Loop
-for (let a = 1; a<=60; a++) {
-    if (a % 17 === 0) {
-        console.log("hiccup");
-        continue;                                                                   //testing continue
-    }
-    console.log(a);
-}
-
 //Dispatching on a Value with switch
 console.log("You are in a cave.\nYou see three exits, with a red, yellow and blue hue respectively.\nA massive rumble suddenly " +
     "shakes the surrounding; the whole place might just collapse!");                                            //testing switch
