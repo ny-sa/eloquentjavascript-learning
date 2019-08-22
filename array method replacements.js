@@ -137,3 +137,6 @@ function arrayEvery(array, f) {
         if(!f(array[i])) return false;
     return true;
 }
+function isArray(array) {
+    return (array instanceof Array);
+}
