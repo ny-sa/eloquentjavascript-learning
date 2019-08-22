@@ -1,7 +1,6 @@
 function objAssign(target, source) {
-    for (let key in source) {
+    for (let key in source)
         target[key] = source[key];
-    }
     return target;
 }
 function objKeys(object) {
@@ -32,15 +31,13 @@ function objEntries(object) {
 }
 function objSwap(object) {
     let swapped = {};
-    for (let key in object) {
+    for (let key in object)
         swapped[object[key]] = key;
-    }
     return swapped;
 }
 function objFromEntries(entries) {
     let obj = {};
-    for (let i in entries) {
+    for (let i in entries)
         obj[entries[i][0]] = entries[i][1];
-    }
     return obj;
 }

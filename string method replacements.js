@@ -3,7 +3,8 @@ function strCharAt(string, index) {
 }
 function strConcat(...strings) {
     let string = '';
-    for (let i in strings) string += strings[i];
+    for (let i in strings)
+        string += strings[i];
     return string;
 }
 function strIncludes(string, part) {
@@ -31,7 +32,8 @@ function strIndexOf(string, part) {
 }
 function strRepeat(string, count) {
     let s = '';
-    for (let i = 0; i < count; i++) s += string;
+    for (let i = 0; i < count; i++)
+        s += string;
     return s;
 }
 function strSplit(string, separator) {
@@ -45,12 +47,14 @@ function strSplit(string, separator) {
 }
 function strSubstr(string, start, length) {
     let str = '';
-    for (let i = start, j = 0; j < length && string[i] !== undefined; i++, j++) str += string[i];
+    for (let i = start, j = 0; j < length && string[i] !== undefined; i++, j++)
+        str += string[i];
     return str;
 }
 function strSubstring(string, start, end) {
     let str = '';
-    for (let i = start; i < end && string[i] !== undefined; i++) str += string[i];
+    for (let i = start; i < end && string[i] !== undefined; i++)
+        str += string[i];
     return str;
 }
 function strToLowerCase(string) {
@@ -85,6 +89,7 @@ function strToUpperCase(string) {
 }
 function strTrim(string) {
     let str = '';
-    for (let i in string) if (string[i] !== ' ') str += string[i];
+    for (let i in string)
+        if (string[i] !== ' ') str += string[i];
     return str;
 }
