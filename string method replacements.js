@@ -18,6 +18,11 @@ function strIncludes(string, part) {
     }
     return false;
 }
+function strEndsWith(string, part) {
+    for (let i = string.length - part.length, j = 0; i < string.length; i++, j++)
+        if (string[i] !== part[j]) return false;
+    return true;
+}
 function strIndexOf(string, part) {
     let parse = '', pInd = -1;
     for (let i = 0, j = 0; i < string.length && j < part.length; i++) {

@@ -103,3 +103,37 @@ function arrayReduce(array, f, init) {
         current = f(current, array[i]);
     return current;
 }
+function arrayReduceRight(array, f, init) {
+    let condition = 0, current = init;
+    if (init == undefined) {
+        condition = 1;
+        current = array[array.length - 1];
+    }
+    for (let i = array.length - 1 - condition; i >= 0; i--)
+        current = f(current, array[i]);
+    return current;
+}
+function arrayFind(array, f) {
+    for (let i in array)
+        if (f(array[i]))
+            return array[i];
+}
+function arrayFindIndex(array, f) {
+    for (let i in array)
+        if (f(array[i]))
+            return i;
+}
+function arrayForEach(array, f) {
+    for (let i in array)
+        f(array[i]);
+}
+function arraySome(array, f) {
+    for (let i in array)
+        if (f(array[i])) return true;
+    return false;
+}
+function arrayEvery(array, f) {
+    for (let i in array)
+        if(!f(array[i])) return false;
+    return true;
+}
